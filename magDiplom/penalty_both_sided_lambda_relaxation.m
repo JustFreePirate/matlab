@@ -6,7 +6,7 @@ dx = 1 / N;
 dt = T / M;
 eps = 1e-4; % eps for penalty method
 invEps = 1 / eps;
-lambda = 0; %-0.006
+lambda = 0.006; %-0.006
 
 w = 0.2; %relaxation factor
 MAX_GZ_ITER = 200000;
@@ -15,11 +15,11 @@ GZ_EPS = dt * 1e-3;
 %if (x < s) hot [liquid]   u > 0
 %if (x > s) %cold [solid]  u < 0
 s0 = 0.5;
-u0 = @(x) -2 * (x - 0.5);
-I0 = @(x) -2 * (x*x/2 - 0.5*x); %% integrate of u0
+u0 = @(x) -1 * (x - 0.5);
+I0 = @(x) -1 * (x*x/2 - 0.5*x); %% integrate of u0
 
-kl = 1; %left k  0.56
-kr = 2; %right k  2.5
+kl = 0.56; %left k  0.56
+kr = 2.5; %right k  2.5
 
 %kl = 1;
 %kr = 1;
