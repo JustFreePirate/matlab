@@ -98,7 +98,7 @@ for k = 2:(M+1)
         xi = x(i);
         sigma = Sigma(xi, u(k-1, i), s(k-1)); %sigma_k-1
         w_t = (w(k, i) - w(k-1, i)) / dt;
-        w_t = 0;
+        %w_t = 0;
        
         %kappa = Kappa(xi, s(k-1));
         kappa = Kappa(xi, s(k));
