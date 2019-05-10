@@ -6,7 +6,7 @@ dx = 1 / N;
 dt = T / M;
 eps = 1e-4; % eps for penalty method
 invEps = 1 / eps;
-lambda = 0.006; %-0.006
+lambda = 0.003; %-0.006
 
 relaxation_weight = 0.2; %relaxation factor
 MAX_GZ_ITER = 200000;

@@ -10,7 +10,7 @@ stabN = [10,     50,     100,    150,      200,        250,        300,         
 stabL = [0.398,  0.403,  0.409,  0.415,    0.4168,     0.4158,     0.4149,      0.4144]; %*dx
 
 N = 100; %x div
-T = 2;
+T = 1;
 M = floor(T*N*N*6); %time div
 dx = 1 / N;
 dt = T / M;
@@ -127,6 +127,7 @@ for k = 2:(M+1)
         u_xx = (u(k-1, i+1) - 2 * u(k-1, i) + u(k-1, i-1)) / dx^2;
         
         %u_xx = (ur - 2 * uc + ul) / h^2;
+        
         
         u(k, i) = u(k-1, i) + dt * (kappa * u_xx + sigma * w_t^2);
     end;
